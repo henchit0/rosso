@@ -1,4 +1,1 @@
-Ezequiel
-Rosso
-Ezequiel
-Rosso
+{"nombre":"Ezequiel","apellido":"Rosso"}

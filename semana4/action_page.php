@@ -7,11 +7,26 @@ $nombre = $_GET['nombre'];
 $apellido = $_GET['apellido'];
 
 echo 'Su nombre es ',$nombre,' ',$apellido,'<br>';
+echo 'Su nombre es '.$_GET['nombre'],' Su apellido es '.$_GET['apellido'];
+echo '<br>';
+echo '<br>';
 
-echo 'Su nombre es '.$_GET['nombre'];
+//$archivo = fopen('archivo.txt', 'a');
+
+
+$miObjeto = new stdClass();
+
+$miObjeto -> nombre = $nombre;
+$miObjeto -> apellido = $apellido;
+
+var_dump(json_encode($miObjeto));
 
 $archivo = fopen('archivo.txt', 'a');
-fwrite($archivo, $_GET["nombre"]."\n");
-fwrite($archivo, $_GET["apellido"]."\n");
+
+fwrite($archivo, json_encode($miObjeto));
+//fwrite($archivo, $_GET["apellido"]."\n");
+//fwrite($archivo, "\n");
+fclose($archivo);
+
 
 ?>
