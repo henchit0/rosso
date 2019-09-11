@@ -1,19 +1,3 @@
-<?php
-$miArchivo = fopen("usuarios.txt", 'r');
-
-while (!feof($miArchivo)) 
-{
-	
-	$objeto = json_decode(fgets($miArchivo));
-
-	echo $objeto->nombre;
-
-}
-
-fclose($miArchivo);
-
-?>
-
 <!DOCTYPE html>
 <html>
 <body>
@@ -21,9 +5,15 @@ fclose($miArchivo);
 <h2>Listado de usuarios</h2>
 
 <ol>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
+	<?php
+		$miArchivo = fopen("usuarios.txt", 'r');
+		while (!feof($miArchivo)) 
+		{	
+			$objeto = json_decode(fgets($miArchivo));
+			echo "<li>".$objeto->nombre."</li>";
+		}
+		fclose($miArchivo);
+	?>
 </ol> 
 
 </body>

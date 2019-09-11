@@ -10,3 +10,4 @@ fwrite($archivo, json_encode($miObjeto)."\n");
 fclose($archivo);
 
 ?>
+
