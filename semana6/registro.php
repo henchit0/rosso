@@ -64,12 +64,6 @@
         <input type="password" name="inputPassword" class="form-control" placeholder="Password" required>
         <label for="inputPassword">Contraseña...</label>
       </div>
-
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Recurdame
-        </label>
-      </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
       
     </form> 

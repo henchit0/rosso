@@ -67,7 +67,7 @@
 
       <div class="checkbox mb-3">
         <label>
-          <input type="checkbox" value="remember-me"> Recurdame
+          <input type="checkbox" value="remember-me"> Recuerdame
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
