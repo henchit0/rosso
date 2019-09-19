@@ -8,7 +8,8 @@
 			<section class="section-default">
 				<h1>Signup</h1>
 				<?php
-					if (isset($_GET['error'])) {
+					if (isset($_GET['error'])) 
+					{
 						if ($_GET['error'] == "camposvacios") {
 							echo '<p>Llena todos los campos!</p>';
 						}
@@ -35,7 +36,7 @@
 					}
 					else if ($_GET['signup'])
 					{
-						echo '<p>Bienvedido!</p>';
+						echo '<p>Bienvenido!</p>';
 					}
 				?>
 					<form action="includes/signup.inc.php" method="post">
