@@ -1,9 +1,9 @@
 <?php
 
-$serverName = "localhost:3307";
+$serverName = "localhost";
 $dBUsername = "root";
 $dBPassword = "";
-$dBName = "usuarios";
+$dBName = "logindeprueba";
 
 //define("DB_HOST", "localhost");
 //define("DB_USER", "root");

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="icon" href="">
 
-    <title>Login</title>
+    <title>Sticky Footer Navbar Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -35,10 +35,10 @@
             <li class="nav-item">
               <a class="nav-link" href="registro.php">Registrate</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="login.php">Login</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="ingresoVehiculo.php">Ingresar Vehiculo</a>
             </li>
             <li class="nav-item">
@@ -55,42 +55,17 @@
 
     <!-- Begin page content -->
     <main role="main" class="container">
-
-      <form action="acciones/hacerLogin.php" class="form-signin">
+      <form action="acciones/hacerVehiculo.php" class="form-signin">
       <div class="text-center mb-4">
         <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
-        <?php
-          if (isset($_GET['error'])) 
-          {
-            if ($_GET['error'] == "camposvacios") {
-              echo '<p>Llena todos los campos!</p>';
-            }
-            else if ($_GET['error'] == "passwordincorrecto") 
-            {
-              echo '<p>La contraseña es incorrecta!</p>';
-            }
-            else if ($_GET['error'] == "usuarionoexiste") 
-            {
-              echo '<p>El usuario no existe!</p>';
-            }
-          }
-          else if ($_GET['exito'])
-          {
-            echo '<p>Bienvenido!</p>';
-          }
-        ?>
-      </div>
-        <input type="text" name="inputUsuario" class="form-control" placeholder="Usuario"autofocus>
-        <input type="password" name="inputPassword" class="form-control" placeholder="Password">
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Recuerdame
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" name="login-submit" type="submit">Ingresar</button>
+        <h1 class="h3 mb-3 font-weight-normal">Ingreso de vehículo</h1>
+      </div>     
+        <input type="text" name="inputMarca" class="form-control" placeholder="Marca" required autofocus>
+        <input type="text" name="inputPatente" class="form-control" placeholder="patente" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
       
-    </form>
+    </form> 
+    </main>
 
     <footer class="footer">
       

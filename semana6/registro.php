@@ -10,11 +10,11 @@
     <title>Sticky Footer Navbar Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="floating-labels.css" rel="stylesheet">
+    <link href="css/floating-labels.css" rel="stylesheet">
 
   </head>
 
@@ -30,13 +30,19 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="registro.php">Registrate</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="login.php">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ingresoVehiculo.php">Ingresar Vehiculo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="listarUsuarios.php">Usuarios</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
@@ -49,30 +55,20 @@
 
     <!-- Begin page content -->
     <main role="main" class="container">
-      <form action="hacerRegistro.php" class="form-signin">
+      <form action="acciones/hacerRegistro.php" class="form-signin">
       <div class="text-center mb-4">
         <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Registro</h1>
-      </div>
-
-      <div class="form-label-group">
+      </div>     
         <input type="text" name="inputUsuario" class="form-control" placeholder="Usuario" required autofocus>
-        <label for="inputUsuario">Usuario...</label>
-      </div>
-
-      <div class="form-label-group">
         <input type="password" name="inputPassword" class="form-control" placeholder="Password" required>
-        <label for="inputPassword">Contraseña...</label>
-      </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
       
     </form> 
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
-      </div>
+      
     </footer>
 
     <!-- Bootstrap core JavaScript
@@ -80,7 +76,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="assets/js/vendor/popper.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

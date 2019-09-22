@@ -7,15 +7,14 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Login</title>
+    <title>Estacionamiento</title>
 
-    <!-- Bootstrap core CSS -->
+     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/floating-labels.css" rel="stylesheet">
-
   </head>
 
   <body>
@@ -35,14 +34,14 @@
             <li class="nav-item">
               <a class="nav-link" href="registro.php">Registrate</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="login.php">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="ingresoVehiculo.php">Ingresar Vehiculo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="listarUsuarios.php">Usuarios</a>
+              <a class="nav-link active" href="listarUsuarios.php">Usuarios</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
@@ -55,42 +54,21 @@
 
     <!-- Begin page content -->
     <main role="main" class="container">
-
-      <form action="acciones/hacerLogin.php" class="form-signin">
-      <div class="text-center mb-4">
-        <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
-        <?php
-          if (isset($_GET['error'])) 
-          {
-            if ($_GET['error'] == "camposvacios") {
-              echo '<p>Llena todos los campos!</p>';
-            }
-            else if ($_GET['error'] == "passwordincorrecto") 
-            {
-              echo '<p>La contraseña es incorrecta!</p>';
-            }
-            else if ($_GET['error'] == "usuarionoexiste") 
-            {
-              echo '<p>El usuario no existe!</p>';
-            }
-          }
-          else if ($_GET['exito'])
-          {
-            echo '<p>Bienvenido!</p>';
-          }
-        ?>
-      </div>
-        <input type="text" name="inputUsuario" class="form-control" placeholder="Usuario"autofocus>
-        <input type="password" name="inputPassword" class="form-control" placeholder="Password">
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Recuerdame
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" name="login-submit" type="submit">Ingresar</button>
-      
-    </form>
+    	<div>
+      	<h2>Listado de usuarios</h2>
+      	<ol>
+			<?php
+			$archivo = fopen("usuarios.txt", "r") or die("Imposible abrir el archivo");
+			while(!feof($archivo)) 
+			{
+		 		$objeto = json_decode(fgets($archivo));
+				echo "<li>Usuario: ".$objeto->usuario." <br>Contraseña: ".$objeto->password."</li>";
+			}
+			fclose($archivo);
+			?>
+		</ol>
+		</div>
+ 	</main>
 
     <footer class="footer">
       
