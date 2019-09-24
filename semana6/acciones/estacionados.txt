@@ -1,0 +1,3 @@
+{"patente":"ab123cd","horaIngreso":null}
+{"patente":"ab123cd","horaIngreso":"19:12"}
+{"patente":"ed3345as","horaIngreso":"19:17"}

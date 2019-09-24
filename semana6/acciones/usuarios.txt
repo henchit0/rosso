@@ -1,0 +1,2 @@
+{"usuario":"Pepito","password":"holamundo"}
+{"usuario":"henchito","password":"asdasd"}
