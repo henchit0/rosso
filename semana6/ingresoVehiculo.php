@@ -59,8 +59,13 @@
       <div class="text-center mb-4">
         <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Ingreso de vehículo</h1>
-      </div>     
-        <input type="text" name="inputMarca" class="form-control" placeholder="Marca" required autofocus>
+      </div>
+        <?php if (isset($_GET['exito'])) 
+          {        
+            echo '<p>Vehiculo ingresado!</p>'; 
+          }
+        ?>
+         
         <input type="text" name="inputPatente" class="form-control" placeholder="patente" required>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
       

@@ -2,7 +2,6 @@
 	
 	$checkUsuario = $_GET['inputUsuario'];
 	$checkPassword = $_GET['inputPassword'];
-
 	if (empty($checkUsuario) || empty($checkPassword)) 
 	{
 		header("Location: ../login.php?error=camposvacios");
@@ -19,6 +18,8 @@
 			{				 
 				if ($objeto->password == $checkPassword)
 				{
+					start_session();
+					$_SESSION['idUsuario'] = $checkUsuario;
 					header("Location: ../login.php?exito=signup");
 					fclose($archivo);
 					exit();
@@ -40,12 +41,9 @@
 		}
 		fclose($archivo);
 	}	
-
 		
-
 	
 	
 	header("Location: ../login.php");
 	exit();
-
 ?>
