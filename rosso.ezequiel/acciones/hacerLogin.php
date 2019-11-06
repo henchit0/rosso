@@ -27,13 +27,13 @@
 			// echo "su nombre es".$usuario["nombre"];
 			// echo "<br>";
 		
-			if ($usuario["nombre"] == $checkUsuario) 
+			if ($usuario['nombre'] == $checkUsuario) 
 			{	
 				$booUsuario = 1;
-				if ($usuario["clave"] == $checkPassword)
+				if ($usuario['clave'] == $checkPassword)
 				{
 					$_SESSION['idDeUsuario'] = $checkUsuario;
-					$_SESSION['perfil'] = $usuario["perfil"];
+					$_SESSION['perfil'] = $usuario['perfil'];
 					$_SESSION['horaIngreso'] = mktime();
 					header("Location: ../paginas/login.php");
 					exit();
